@@ -1,0 +1,23 @@
+{% extends "homepage/wrapper.html" %}
+
+{% block content %}
+{% load staticfiles %}
+<div class="container-fluid text-white" style="background-image:url({% static 'homepage/image/blur.jpg' %});font-family:Oranienbaum">
+    <h2 class="text-white">Юридические консультации и миграционные услуги для иностранных граждан и организаций.</h2>
+    <p>Наша специализация — устный и письменный перевод документов, текстов, аудиозаписей и видеоматериалов. Также мы помогаем в проведении международных выставок, семинаров и переговоров. За время существования нашего бюро мы значительно выросли, достигли многих успехов и накопили немалый опыт в переводах разных направлений.
+
+Вы можете в любой момент связаться с нашим менеджером, получить консультацию, внести необходимые изменения в заказ или добавить какие-то дополнительные материалы на перевод. Все персональные данные, которые передает клиент, защищены и обрабатываются конфиденциально.</p>
+    <br>
+</div>
+<div class="container-fluid">
+
+        <img src='{% static "homepage/image/logo.jpg" %}' class="rounded mx-auto d-block img-fluid">
+    <div class="row text-white">
+        <div class="col-sm-12 col-md-4 lead" style="background-color:#e6e6fa">Мы стремимся помочь Вам</div>
+        <div class="col-sm-12 col-md-4 lead" style="background-color:#d8bfd8">Находимся рядом</div>
+        <div class="col-sm-12 col-md-4 lead" style="background-color:#46394b">Всегда рады</div>
+    </div>
+
+</div>
+
+{% endblock %}

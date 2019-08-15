@@ -1,0 +1,25 @@
+{% extends "homepage/wrapper.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+  <h3 class="display-4">Вот что мы можем:</h3>
+  <hr>
+</div>
+<div class="container-fluid">
+
+<div class="card-columns">
+  {% for serv in object_list %}
+  <div class="card shadow">
+    <div class="card-body">
+      <h5 class="card-title">{{serv.service_name}}</h5>
+    </div>
+      <div class="card-footer">
+        <small>{{serv.price}} рублей</small>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+
+{% endblock %}

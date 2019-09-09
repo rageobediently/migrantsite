@@ -1,0 +1,26 @@
+{% extends "homepage/wrapper.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <form action="{% url 'check_done' %}">
+        <label for="inputNumber">Проверьте готовность вашего заказа</label>
+        <input type="text" class="form-control" id="inputNumber" placeholder="Введите номер заказа" name="check">
+        <br>
+        <button type="submit" class="btn btn-primary">Узнать</button>
+    </form>
+    <br>
+    {% if cheking %}
+        <h4>Проверяемый номер: {{ cheking.id }}</h4>
+        <hr>
+        <h3>Ваш заказ
+            {% if cheking.done %}<span class="badge badge-success">Готов</span>{% endif %}
+            {% if cheking.done == False %}<span class="badge badge-secondary">в процессе</span>{% endif %}
+        </h3>
+    {% else %}
+        {% if cheking == None %}
+            <div class="alert alert-danger" role="alert">
+                Вы ввели неверный номер
+            </div>
+        {% endif %}
+    {% endif %}
+{% endblock %}
